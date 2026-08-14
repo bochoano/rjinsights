@@ -1,0 +1,412 @@
+:root {
+    --play-blue: #4F67B1;
+    --nude-stone: #FFD7B9;
+    --stained-cork: #B44B28;
+    --bg-color: #EFECE6;
+    --text-dark: #1F2229;
+    --white: #FFFFFF;
+    --card-purple: #D5CCFF;
+    --card-stone: #E6E2D8;
+    --card-orange: #FF6B35;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* App Header bar */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2.5rem;
+    background: var(--bg-color);
+    border-bottom: 2px solid rgba(31, 34, 41, 0.1);
+}
+
+.brand {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+}
+
+.nav-pills {
+    display: flex;
+    gap: 0.5rem;
+    background: #E0DCD3;
+    padding: 4px;
+    border-radius: 30px;
+    flex-wrap: wrap;
+}
+
+.pill {
+    background: transparent;
+    border: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #666;
+    transition: all 0.2s ease;
+}
+
+.pill.active {
+    background: var(--text-dark);
+    color: var(--white);
+}
+
+.pill.prototype-tab {
+    background-color: var(--stained-cork);
+    color: var(--white);
+}
+
+/* Viewport Panel Switching */
+.viewport-wrapper {
+    flex: 1;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+}
+
+.view-panel {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.view-panel.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero / Primary Orange Card */
+.hero-card {
+    background-color: var(--stained-cork);
+    color: var(--white);
+    padding: 3rem 2.5rem;
+    border-radius: 28px;
+    box-shadow: 0 20px 40px rgba(180, 75, 40, 0.15);
+}
+
+.sub-tag {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    opacity: 0.85;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.hero-card h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.5rem;
+}
+
+.hero-card h1 span {
+    color: var(--nude-stone);
+}
+
+.hero-desc {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    opacity: 0.95;
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+}
+
+.stats-row {
+    display: flex;
+    gap: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 1.5rem;
+}
+
+.stat-num {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: block;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+/* Section Header */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.section-header h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: -0.02em;
+}
+
+.count-badge {
+    font-family: 'Space Grotesk', sans-serif;
+    background: var(--text-dark);
+    color: var(--white);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* Stack Cards */
+.stack-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.stack-card {
+    padding: 2rem;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: transform 0.2s ease;
+}
+
+.stack-card:hover {
+    transform: translateY(-3px);
+}
+
+.card-purple { background-color: var(--card-purple); }
+.card-stone { background-color: var(--card-stone); }
+.card-orange { background-color: var(--stained-cork); color: var(--white); }
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.card-id {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    background: var(--white);
+    color: var(--text-dark);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.card-orange .card-id {
+    background: var(--text-dark);
+    color: var(--white);
+}
+
+.arrow-icon {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.stack-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+}
+
+.stack-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.phase-number {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.5rem;
+    opacity: 0.7;
+}
+
+/* Editorial Dropdowns */
+.editorial-dropdown {
+    background: var(--white);
+    border-radius: 14px;
+    padding: 1.1rem 1.25rem;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+.editorial-dropdown summary {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    outline: none;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.editorial-dropdown summary span {
+    background: var(--bg-color);
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+}
+
+.editorial-dropdown p {
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Mid-Fi Mobile Prototype Container */
+.phone-frame {
+    max-width: 380px;
+    margin: 0 auto;
+    background: var(--text-dark);
+    border-radius: 40px;
+    padding: 14px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.phone-notch {
+    width: 120px;
+    height: 20px;
+    background: var(--text-dark);
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 10;
+}
+
+.phone-screen {
+    background: var(--bg-color);
+    border-radius: 30px;
+    padding: 2rem 1.25rem 1.5rem;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.app-screen-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.app-logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.secure-badge {
+    font-size: 0.6rem;
+    font-weight: 700;
+    background: #1F2229;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+}
+
+.app-card-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.app-widget {
+    padding: 1.25rem;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.widget-tag {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    background: var(--white);
+    padding: 0.15rem 0.4rem;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 0.4rem;
+}
+
+.app-widget h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.05rem;
+    margin-bottom: 0.25rem;
+}
+
+.app-widget p {
+    font-size: 0.8rem;
+    opacity: 0.9;
+    margin-bottom: 0.75rem;
+}
+
+.app-action-btn {
+    background: var(--text-dark);
+    color: var(--white);
+    border: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.4rem 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .app-header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .nav-pills {
+        width: 100%;
+        justify-content: center;
+        overflow-x: auto;
+    }
+}

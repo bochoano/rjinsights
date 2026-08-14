@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brittany Ochoa-Nordstrum — Insights OS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TOP APP BAR / PROTOTYPE NAVIGATION -->
+    <header class="app-header">
+        <div class="brand">BRITTANY OCHOA-NORDSTRUM</div>
+        <div class="nav-pills">
+            <button class="pill active" onclick="switchTab('overview')">01 / OVERVIEW</button>
+            <button class="pill" onclick="switchTab('pillars')">02 / PILLARS</button>
+            <button class="pill" onclick="switchTab('blueprint')">03 / BLUEPRINT</button>
+            <button class="pill" onclick="switchTab('roadmap')">04 / ROADMAP</button>
+            <button class="pill prototype-tab" onclick="switchTab('prototype')">📱 UX PROTOTYPE</button>
+        </div>
+    </header>
+
+    <!-- VIEWPORT WRAPPER -->
+    <div class="viewport-wrapper">
+
+        <!-- VIEW 1: OVERVIEW -->
+        <main id="overview" class="view-panel active">
+            <div class="hero-card primary-orange">
+                <span class="sub-tag">INSIGHTS STRATEGY // 2026 ARCHITECTURE</span>
+                <h1>Building a Ground-Up <br><span>Consumer Insights Engine</span></h1>
+                <p class="hero-desc">
+                    A strategic framework designed to establish a high-impact, scalable, and compliant consumer insights engine tailored for enterprise growth, translating rigorous data into category leadership.
+                </p>
+                <div class="stats-row">
+                    <div class="stat-box">
+                        <span class="stat-num">65%</span>
+                        <span class="stat-label">Speed-to-Insight</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-num">01</span>
+                        <span class="stat-label">Zero-to-One Scale</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- VIEW 2: PILLARS -->
+        <main id="pillars" class="view-panel">
+            <div class="section-header">
+                <h2>Strategic Pillars</h2>
+                <span class="count-badge">03</span>
+            </div>
+            <div class="stack-container">
+                <div class="stack-card card-purple">
+                    <div class="card-top">
+                        <span class="card-id">STR</span>
+                        <span class="arrow-icon">↗</span>
+                    </div>
+                    <h3>Target Organization & Scope</h3>
+                    <p>Aligning multi-brand stakeholder needs across operating companies, optimizing agency spend, and resolving critical insight gaps.</p>
+                </div>
+                <div class="stack-card card-stone">
+                    <div class="card-top">
+                        <span class="card-id">OPS</span>
+                        <span class="arrow-icon">↘</span>
+                    </div>
+                    <h3>Core Experience Architecture</h3>
+                    <p>Establishing rigorous qualitative and quantitative testing loops, participant recruitment pools, and standardized data ingestion pipelines.</p>
+                </div>
+                <div class="stack-card card-orange">
+                    <div class="card-top">
+                        <span class="card-id">ROI</span>
+                        <span class="arrow-icon">→</span>
+                    </div>
+                    <h3>Efficiency & Impact</h3>
+                    <p>Accelerating time-to-market by replacing legacy, slow-moving research workflows with agile sprint testing and executive dashboards.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- VIEW 3: BLUEPRINT -->
+        <main id="blueprint" class="view-panel">
+            <div class="section-header">
+                <h2>Program Blueprint</h2>
+                <span class="count-badge">01</span>
+            </div>
+            <div class="stack-card card-stone" style="border: 2px solid #1F2229;">
+                <h3>Corporate Research Program Construction</h3>
+                <p style="margin-bottom: 1.5rem;">Modeled after ground-up scaling initiatives to transform fragmented studies into a unified corporate asset.</p>
+                
+                <details class="editorial-dropdown">
+                    <summary><span>Phase I</span> Governance & Infrastructure</summary>
+                    <p>Built end-to-end testing pipelines, data security compliance, and centralized intake workflows.</p>
+                </details>
+                <details class="editorial-dropdown">
+                    <summary><span>Phase II</span> Cross-Functional Integration</summary>
+                    <p>Embedded research findings directly into product design sprints, marketing channels, and leadership decision-making.</p>
+                </details>
+                <details class="editorial-dropdown">
+                    <summary><span>Phase III</span> Continuous Tracking</summary>
+                    <p>Rolled out longitudinal brand tracking dashboards to measure program ROI and consumer sentiment shifts.</p>
+                </details>
+            </div>
+        </main>
+
+        <!-- VIEW 4: ROADMAP -->
+        <main id="roadmap" class="view-panel">
+            <div class="section-header">
+                <h2>12-Month Rollout</h2>
+                <span class="count-badge">12</span>
+            </div>
+            <div class="stack-container">
+                <div class="stack-card card-stone">
+                    <span class="phase-number">01</span>
+                    <h3>Months 1–3: Audit & Align</h3>
+                    <p>Map internal stakeholder requirements, review existing research assets, and establish baseline performance metrics.</p>
+                </div>
+                <div class="stack-card card-purple">
+                    <span class="phase-number">02</span>
+                    <h3>Months 4–6: Build Infrastructure</h3>
+                    <p>Deploy research software stacks, recruit dedicated user panels, and pilot initial rapid-testing sprints.</p>
+                </div>
+                <div class="stack-card card-orange">
+                    <span class="phase-number">03</span>
+                    <h3>Months 7–12: Scale & Optimize</h3>
+                    <p>Scale high-frequency testing across all major portfolios, automate reporting loops, and institutionalize the insights engine.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- VIEW 5: MID-FI MOBILE PROTOTYPE -->
+        <main id="prototype" class="view-panel">
+            <div class="section-header">
+                <h2>UX Mobile Prototype</h2>
+                <span class="count-badge">UI/UX</span>
+            </div>
+            <p class="section-subtitle" style="margin-bottom: 1.5rem;">Interactive mid-fi flow testing adult consumer onboarding & preference tracking.</p>
+            
+            <div class="phone-frame">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                    <div class="app-screen-header">
+                        <span class="app-logo">RJ Reynolds // OS</span>
+                        <span class="secure-badge">AGE 21+ VERIFIED</span>
+                    </div>
+                    
+                    <div class="app-card-stack">
+                        <div class="app-widget card-purple">
+                            <span class="widget-tag">CATEGORY 01</span>
+                            <h4>Modern Oral Portfolios</h4>
+                            <p>VELO preference tracking & flavor profile configuration matrix.</p>
+                            <button class="app-action-btn" onclick="alert('Simulating user preference log...')">Log Feedback ↗</button>
+                        </div>
+                        
+                        <div class="app-widget card-stone">
+                            <span class="widget-tag">CATEGORY 02</span>
+                            <h4>Vapor Analytics</h4>
+                            <p>Vuse device engagement loops and packaging validation testing.</p>
+                            <button class="app-action-btn" onclick="alert('Opening sprint metrics...')">View Sprints ↘</button>
+                        </div>
+
+                        <div class="app-widget card-orange" style="color: white;">
+                            <span class="widget-tag" style="background: rgba(255,255,255,0.2); color: white;">LIVE DATA</span>
+                            <h4>Real-Time Insight Feed</h4>
+                            <p>65% faster time-to-insight deployed across stakeholder pipelines.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script>
+        function switchTab(viewId) {
+            document.querySelectorAll('.view-panel').forEach(panel => {
+                panel.classList.remove('active');
+            });
+            document.querySelectorAll('.pill').forEach(pill => {
+                pill.classList.remove('active');
+            });
+            document.getElementById(viewId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
